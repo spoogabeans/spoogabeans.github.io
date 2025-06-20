@@ -1,191 +1,155 @@
-/* Import Oswald and Sora fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Sora:wght@400;600&display=swap');
-
-:root {
-  --black: #000000;
-  --blue: #1e90ff;
-  --yellow: #ffea00;
-  --white: #f9f9f9;
-  --gray-light: #f0f0f0;
-  --gray-dark: #222222;
-}
-
+/* Reset and basics */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+  background: #000;
+  color: #fefefe;
 }
 
 body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'Sora', sans-serif;
-  line-height: 1.6;
-  padding: 40px 20px;
+  background: linear-gradient(135deg, #000 40%, #0033cc 80%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 nav {
-  max-width: 900px;
-  margin: 0 auto 2rem;
+  background: #001a66;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
   gap: 2rem;
-  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 nav a {
-  color: var(--blue);
+  color: #fefefe;
   text-decoration: none;
-  font-size: 1.1rem;
-  padding-bottom: 4px;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-  border-bottom-color: var(--yellow);
-  color: var(--yellow);
+  border-color: #ffeb3b;
+  color: #ffeb3b;
 }
 
 main {
+  flex: 1;
+  padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
-  background: var(--gray-dark);
-  padding: 2.5rem 3rem;
-  border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255, 234, 0, 0.3);
 }
 
-h1, h2 {
+h1#name {
   font-family: 'Oswald', sans-serif;
-  font-weight: 700;
-  color: var(--yellow);
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-
-h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  letter-spacing: 0.3em;
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-  border-bottom: 2px solid var(--blue);
-  padding-bottom: 6px;
-  margin-top: 2rem;
+  color: #ffeb3b;
+  margin-bottom: 0.25rem;
 }
 
 .subtitle {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--blue);
   text-align: center;
-  margin-bottom: 3rem;
+  font-style: italic;
+  color: #66aaff;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
 }
 
-.project, .project a {
-  display: block;
+section h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #ffeb3b;
+  padding-bottom: 0.25rem;
+  color: #ffeb3b;
+}
+
+#about p, #projects div, #contact ul {
+  margin-bottom: 1.5rem;
+}
+
+#project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .project {
-  background: var(--black);
+  background: #001a66;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
-  padding: 1.2rem 1.5rem;
-  box-shadow: 0 3px 12px rgba(30,144,255,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  border: 2px solid #ffeb3b;
+  transition: background 0.3s ease;
 }
 
 .project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(255, 234, 0, 0.6);
-  background: var(--blue);
-  color: var(--black);
+  background: #0033cc;
 }
 
 .project strong {
-  font-size: 1.3rem;
-  display: block;
-  margin-bottom: 0.4rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  color: #ffeb3b;
 }
 
-.project em {
-  font-weight: 400;
-  font-size: 1rem;
-  margin-bottom: 0.6rem;
-  display: block;
+.project p {
+  margin-top: 0.3rem;
+  color: #dcefff;
 }
 
 .project a {
-  color: var(--yellow);
-  font-weight: 600;
+  color: #66aaff;
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 600;
 }
 
 .project a:hover {
-  color: var(--white);
   text-decoration: underline;
 }
 
-#contact-info {
+#contact ul {
   list-style: none;
-  max-width: 600px;
-  margin: 1rem auto;
-  font-weight: 400;
-  font-size: 1.1rem;
+  padding-left: 0;
 }
 
-#contact-info li {
-  margin-bottom: 0.8rem;
-}
-
-#contact-info a {
-  color: var(--blue);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-#contact-info a:hover {
-  color: var(--yellow);
-  text-decoration: underline;
+#contact li {
+  margin-bottom: 0.5rem;
 }
 
 footer {
-  margin-top: auto;
-  padding: 1rem 0;
+  background: #001a66;
   text-align: center;
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: var(--gray-light);
+  padding: 1rem 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #ffeb3b;
 }
 
-button#theme-toggle {
-  display: none; /* hide for now or style later */
+/* SFX page specific */
+
+#credits .project img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
 }
 
 /* Responsive */
 
 @media (max-width: 600px) {
-  body {
-    padding: 20px 10px;
-  }
-  main {
-    padding: 1.5rem 1.5rem;
-  }
-  h1 {
-    font-size: 2rem;
+  h1#name {
+    font-size: 2.5rem;
   }
   nav {
+    flex-direction: column;
     gap: 1rem;
   }
 }
-
