@@ -48,7 +48,10 @@
 <footer>
   &copy; <span id="year"></span> Rachel
 </footer>
-<script src="sfx-script.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
 
