@@ -1,0 +1,198 @@
+/* Import Oswald and Sora fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Sora:wght@400;600&display=swap');
+
+:root {
+  --black: #000000;
+  --blue: #1e90ff;
+  --yellow: #ffea00;
+  --white: #f9f9f9;
+  --gray-light: #f0f0f0;
+  --gray-dark: #222222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Sora', sans-serif;
+  line-height: 1.6;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+nav a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom-color: var(--yellow);
+  color: var(--yellow);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--gray-dark);
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 234, 0, 0.3);
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: var(--yellow);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 6px;
+  margin-top: 2rem;
+}
+
+.subtitle {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--blue);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#bio {
+  font-weight: 400;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--white);
+}
+
+.project, .project a {
+  display: block;
+}
+
+.project {
+  background: var(--black);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 3px 12px rgba(30,144,255,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(255, 234, 0, 0.6);
+  background: var(--blue);
+  color: var(--black);
+}
+
+.project strong {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.project em {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.project a {
+  color: var(--yellow);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+#contact-info {
+  list-style: none;
+  max-width: 600px;
+  margin: 1rem auto;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+#contact-info li {
+  margin-bottom: 0.8rem;
+}
+
+#contact-info a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contact-info a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--gray-light);
+}
+
+button#theme-toggle {
+  display: none; /* hide for now or style later */
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+  main {
+    padding: 1.5rem 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  nav {
+    gap: 1rem;
+  }
+}
