@@ -30,3 +30,4 @@ config.projects.forEach(p => {
   div.innerHTML = `<strong>${p.title}</strong><br><em>${p.description}</em><br><a href="${p.link}" target="_blank">↗ view film</a>`;
   projectList.appendChild(div);
 });
+
