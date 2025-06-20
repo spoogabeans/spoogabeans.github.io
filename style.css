@@ -89,14 +89,6 @@ h2 {
   margin-bottom: 3rem;
 }
 
-#bio {
-  font-weight: 400;
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  color: var(--white);
-}
-
 .project, .project a {
   display: block;
 }
@@ -196,3 +188,4 @@ button#theme-toggle {
     gap: 1rem;
   }
 }
+
